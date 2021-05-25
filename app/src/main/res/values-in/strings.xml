@@ -28,4 +28,5 @@
     <string name="movie_button_nav">Film</string>
     <string name="favorite_buttom_nav">Favorit</string>
     <string name="hint_et_search_form">Cari film</string>
+    <string name="title_favorite">Judul Favorite</string>
 </resources>

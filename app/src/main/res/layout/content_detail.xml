@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="wrap_content"
@@ -101,55 +99,6 @@
                 android:text="@string/dummy_number" />
 
         </TableRow>
-
-        <TableRow
-            android:id="@+id/nmb_of_eps"
-            style="@style/DetailDesc.TableRow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <TextView
-                style="@style/DetailDesc.TableRow.TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="@string/number_of_episodes" />
-
-            <TextView
-                android:id="@+id/tv_number_of_eps"
-                style="@style/DetailDesc.TableRow.TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_number" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/nmb_of_seas"
-            style="@style/DetailDesc.TableRow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <TextView
-                style="@style/DetailDesc.TableRow.TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="@string/number_of_seasons" />
-
-            <TextView
-                android:id="@+id/tv_number_of_seasons"
-                style="@style/DetailDesc.TableRow.TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_number" />
-
-        </TableRow>
-
         <TableRow
             style="@style/DetailDesc.TableRow"
             android:layout_width="wrap_content"

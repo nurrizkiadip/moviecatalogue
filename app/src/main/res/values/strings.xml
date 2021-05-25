@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Movie Catalogue</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="movies_catalogue_poster">Movies Catalogue Poster</string>
-    <string name="release_date_movie">Release Date</string>
-    <string name="title_movies">Title Movies</string>
+
+    //<!--Tab Layout-->
     <string name="tab_text_1">Movies</string>
     <string name="tab_text_2">TV Shows</string>
+
     <string name="poster_movies">Poster Movies</string>
     <string name="title_detail">Title</string>
     <string name="release_date_detail">Release Date</string>
@@ -15,7 +15,6 @@
     <string name="overview_detail">Overview</string>
     <string name="dummy_overview_default">Overview default</string>
     <string name="dummy_language_default">Language Default</string>
-    <string name="title_tvshow">Title TV Show</string>
     <string name="tvshows_poster">Poster TvShow</string>
     <string name="number_of_episodes">Number of Episodes</string>
     <string name="number_of_seasons">Number of Seasons</string>
@@ -28,4 +27,5 @@
     <string name="tv_button_nav">Tv Shows</string>
     <string name="movie_button_nav">Movies</string>
     <string name="hint_et_search_form">Search movie</string>
+    <string name="title_favorite">Favorite</string>
 </resources>

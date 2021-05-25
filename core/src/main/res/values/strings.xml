@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="movies_catalogue_poster">Poster Image</string>
+    <string name="title_detail">Title</string>
+    <string name="release_date_detail">Release Date</string>
+    <string name="tvshows_poster">Poster TvShow</string>
+    <string name="no_data">No Data</string>
+
+
+</resources>

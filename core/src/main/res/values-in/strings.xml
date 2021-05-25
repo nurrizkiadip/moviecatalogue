@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="movies_catalogue_poster">Gambar Poster</string>
+    <string name="title_detail">Judul</string>
+    <string name="release_date_detail">Tanggal Rilis</string>
+    <string name="tvshows_poster">Poster TvShow</string>
+    <string name="no_data">Tidak ada data</string>
+</resources>

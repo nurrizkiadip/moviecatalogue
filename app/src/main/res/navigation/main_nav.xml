@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/navigation_movie"
-        android:name="com.nurrizkiadip_a1201541.moviecatalogue.ui.movies.MoviesCatalogueFragment"
+        android:name="com.nurrizkiadip_a1201541.moviecatalogue.nav_ui.movies.MoviesCatalogueFragment"
         android:label="Movies Catalogue"
         tools:layout="@layout/fragment_movies_catalogue" />
     <fragment
         android:id="@+id/navigation_tv_show"
-        android:name="com.nurrizkiadip_a1201541.moviecatalogue.ui.tvshows.TvShowsCatalogueFragment"
+        android:name="com.nurrizkiadip_a1201541.moviecatalogue.nav_ui.tvshows.TvShowsCatalogueFragment"
         android:label="Tv Shows Catalogue"
         tools:layout="@layout/fragment_tv_shows_catalogue" />
     <fragment
         android:id="@+id/navigation_favorite"
-        android:name="com.nurrizkiadip_a1201541.moviecatalogue.ui.favorite.FavoriteFragment"
+        android:name="com.nurrizkiadip_a1201541.moviecatalogue.favorite.FavoriteFragment"
         android:label="Movie Favorite"
         tools:layout="@layout/fragment_favorite" />
 </navigation>
