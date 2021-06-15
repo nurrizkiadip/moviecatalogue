@@ -1,6 +1,5 @@
 package com.nurrizkiadip_a1201541.moviecatalogue.core.ui
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -16,12 +15,10 @@ class TvShowsAdapter : RecyclerView.Adapter<TvShowsAdapter.TvShowViewHolder>(){
     private val listTvShows = ArrayList<TvShow>()
     var onItemClick: ((TvShow) -> Unit)? = null
 
-    fun setTvShows(listTvShow: List<TvShow>){
-        if(listTvShow.isNullOrEmpty()) return
+    fun setTvShows(list: List<TvShow>){
         this.listTvShows.clear()
-        this.listTvShows.addAll(listTvShow)
+        this.listTvShows.addAll(list)
         notifyDataSetChanged()
-        Log.d("TvShowsAdapter", "setMovies: isi list ${this.listTvShows[0]}")
     }
 
 

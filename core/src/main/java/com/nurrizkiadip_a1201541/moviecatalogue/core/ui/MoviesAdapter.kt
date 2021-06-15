@@ -1,6 +1,5 @@
 package com.nurrizkiadip_a1201541.moviecatalogue.core.ui
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -13,15 +12,13 @@ import com.nurrizkiadip_a1201541.moviecatalogue.core.domain.model.Movie
 
 class MoviesAdapter: RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
-    private val listMovies = ArrayList<Movie>()
+    val listMovies = ArrayList<Movie>()
     var onItemClick: ((Movie) -> Unit)? = null
 
-    fun setMovies(listMovies: List<Movie>) {
-        if (listMovies.isNullOrEmpty()) return
+    fun setMovies(list: List<Movie>) {
         this.listMovies.clear()
-        this.listMovies.addAll(listMovies)
+        this.listMovies.addAll(list)
         notifyDataSetChanged()
-        Log.d("MoviesAdapter", "setMovies: isi movie list ${listMovies[0]}")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

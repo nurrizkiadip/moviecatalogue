@@ -15,7 +15,6 @@ import com.nurrizkiadip_a1201541.moviecatalogue.detail.DetailActivity
 import com.nurrizkiadip_a1201541.moviecatalogue.detail.DetailActivity.Companion.TV_TYPE
 import com.nurrizkiadip_a1201541.moviecatalogue.favorite.FavoriteViewModel
 import com.nurrizkiadip_a1201541.moviecatalogue.favorite.databinding.FragmentTvShowFavoriteBinding
-import com.nurrizkiadip_a1201541.moviecatalogue.nav_ui.movies.MoviesCatalogueFragment
 import com.nurrizkiadip_a1201541.moviecatalogue.utils.gone
 import com.nurrizkiadip_a1201541.moviecatalogue.utils.visible
 
@@ -52,8 +51,6 @@ class TvShowFavoriteFragment : Fragment() {
                 startActivity(intent)
             }
 
-            populateTvFav()
-
             binding.rvTvshow.apply {
                 layoutManager = LinearLayoutManager(context)
                 setHasFixedSize(true)
@@ -89,6 +86,12 @@ class TvShowFavoriteFragment : Fragment() {
                 binding.progressBar.gone()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        populateTvFav()
+        adapter.notifyDataSetChanged()
     }
 
     private fun populateTvFav() {

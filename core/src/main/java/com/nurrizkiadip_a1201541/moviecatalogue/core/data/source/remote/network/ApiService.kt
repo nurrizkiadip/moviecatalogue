@@ -23,16 +23,4 @@ interface ApiService {
         @Query("page") page: Int = 1
     ): TvShowResponse
 
-    @GET("3/movie/{id}")
-    suspend fun getMovieById(
-        @Path("id") id: Int,
-        @Query("api_key") apiKey: String = API_KEY,
-    ): MovieDetailResponse
-
-    @GET("3/tv/{id}")
-    suspend fun getTvById(
-        @Path("id") id: Int,
-        @Query("api_key") apiKey: String = API_KEY,
-    ): TvDetailResponse
-
 }

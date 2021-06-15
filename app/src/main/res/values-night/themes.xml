@@ -20,6 +20,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="TabLayoutFav">
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
     <style name="DetailDesc">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

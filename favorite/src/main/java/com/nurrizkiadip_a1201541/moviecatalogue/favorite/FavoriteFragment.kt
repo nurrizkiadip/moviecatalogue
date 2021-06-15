@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.StringRes
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nurrizkiadip_a1201541.moviecatalogue.R
 import com.nurrizkiadip_a1201541.moviecatalogue.favorite.databinding.FragmentFavoriteBinding

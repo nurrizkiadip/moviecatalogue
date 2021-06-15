@@ -6,8 +6,6 @@
     tools:targetApi="o">
 
     <uses-permission android:name="android.permission.INTERNET" />
-<!--    android:networkSecurityConfig="@xml/network_security_config"-->
-<!--    tools:ignore="AllowBackup,GoogleAppIndexingWarning"-->
 
     <application
         android:name=".MovieCatalogueApp"

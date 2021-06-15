@@ -8,6 +8,8 @@ import com.nurrizkiadip_a1201541.moviecatalogue.core.data.source.local.room.Movi
 import com.nurrizkiadip_a1201541.moviecatalogue.core.data.source.remote.RemoteDataSource
 import com.nurrizkiadip_a1201541.moviecatalogue.core.data.source.remote.network.ApiService
 import com.nurrizkiadip_a1201541.moviecatalogue.core.domain.repository.IMovieRepository
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -18,11 +20,15 @@ import java.util.concurrent.TimeUnit
 
 val databaseModule = module {
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("moviecatalogue".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             MovieDatabase::class.java,
             "movie.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
     }
 
     factory{ get<MovieDatabase>().movieDao() }

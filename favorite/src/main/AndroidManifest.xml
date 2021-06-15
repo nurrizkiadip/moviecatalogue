@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.nurrizkiadip_a1201541.moviecatalogue.favorite">
+    package="com.nurrizkiadip_a1201541.moviecatalogue.favorite"
+    >
 
     <dist:module
         dist:instant="false"
-        dist:title="@string/title_favorite">
+        dist:title="@string/title_favorite"
+        >
         <dist:delivery>
             <dist:install-time />
         </dist:delivery>

@@ -13,7 +13,6 @@ import com.nurrizkiadip_a1201541.moviecatalogue.detail.DetailActivity
 import com.nurrizkiadip_a1201541.moviecatalogue.detail.DetailActivity.Companion.MOVIE_TYPE
 import com.nurrizkiadip_a1201541.moviecatalogue.favorite.FavoriteViewModel
 import com.nurrizkiadip_a1201541.moviecatalogue.favorite.databinding.FragmentMovieFavoriteBinding
-import com.nurrizkiadip_a1201541.moviecatalogue.nav_ui.movies.MoviesCatalogueFragment
 import com.nurrizkiadip_a1201541.moviecatalogue.utils.gone
 import com.nurrizkiadip_a1201541.moviecatalogue.utils.visible
 
@@ -25,9 +24,6 @@ class MovieFavoriteFragment : Fragment() {
     private val viewModel: FavoriteViewModel by viewModel()
     private lateinit var adapter: MoviesAdapter
 
-    companion object{
-        private val TAG: String = MovieFavoriteFragment::class.java.simpleName
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +39,8 @@ class MovieFavoriteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        Log.d(TAG, "onViewCreated: jalan")
+        
         if(activity != null){
             adapter.onItemClick = {
                 val intent = Intent(activity, DetailActivity::class.java)
@@ -51,8 +48,6 @@ class MovieFavoriteFragment : Fragment() {
                 intent.putExtra(DetailActivity.EXTRA_DATA, it)
                 startActivity(intent)
             }
-
-            populateMoviesFav()
 
             binding.rvMovies.apply {
                 layoutManager = LinearLayoutManager(context)
@@ -90,6 +85,12 @@ class MovieFavoriteFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        populateMoviesFav()
+        adapter.notifyDataSetChanged()
+    }
+
     private fun populateMoviesFav() {
         viewModel.allMovieFavorite.observe(viewLifecycleOwner){
             if(it != null){
@@ -109,5 +110,9 @@ class MovieFavoriteFragment : Fragment() {
     override fun onDestroy() {
         _binding = null
         super.onDestroy()
+    }
+
+    companion object{
+        private val TAG: String = MovieFavoriteFragment::class.java.simpleName
     }
 }
