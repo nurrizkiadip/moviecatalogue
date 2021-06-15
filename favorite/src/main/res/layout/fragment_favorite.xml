@@ -15,7 +15,7 @@
         android:elevation="0dp"
         app:tabSelectedTextColor="@android:color/white"
         app:tabTextColor="@android:color/darker_gray"
-        app:tabIndicatorColor="@color/primary_dark"
+        app:tabIndicatorColor="@color/primary_light"
         app:tabRippleColor="@color/white"
         app:tabUnboundedRipple="true"
         app:layout_constraintEnd_toEndOf="parent"
